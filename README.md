@@ -1,1 +1,1 @@
-# nethibit-backend
+# Sequelize_project

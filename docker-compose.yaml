@@ -13,10 +13,10 @@ services:
     ports:
       - "3306:3306"
     environment:
-      - MYSQL_ROOT_PASSWORD=password1
-      - MYSQL_USER=user1
-      - MYSQL_PASSWORD=password1
-      - MYSQL_DATABASE=user1
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=1234
+      - MYSQL_DATABASE=nethibitDB
   app:
     networks:
       - app-tier

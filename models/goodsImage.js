@@ -1,6 +1,5 @@
 const Sequelize = require("sequelize");
-const { initiate } = require("./declaration");
-const sequelize = require("../config/database");
+
 
 class GoodsImage extends Sequelize.Model{
   static initiate(sequelize) {

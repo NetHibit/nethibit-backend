@@ -41,6 +41,8 @@ const sequelize = new Sequelize(
 );
 db.sequelize = sequelize;
 
+sequelize.sync({ force: false }); 
+
 db.Declaration = Declaration;
 Declaration.initiate(sequelize);
 

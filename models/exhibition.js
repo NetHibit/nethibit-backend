@@ -11,7 +11,7 @@ class Exhibition extends Sequelize.Model {
         },
         title: Sequelize.STRING,
         main_image: Sequelize.STRING,
-        introduction: Sequelize.STRING,
+        instroduction: Sequelize.STRING,
         start_date: Sequelize.DATE,
         end_date: Sequelize.DATE,
         like_count: Sequelize.INTEGER,

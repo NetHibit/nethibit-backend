@@ -3,7 +3,6 @@ const User = require("../models/users");
 
 class ExhibitionRepository {
   findById = async (exhibitionId) => {
-    console.log(typeof(exhibitionId));
       const getExhibition = await Exhibition.findByPk(exhibitionId);
 
       if (!getExhibition) {
@@ -13,16 +12,16 @@ class ExhibitionRepository {
       return getExhibition;
     
   }
-    createExhibition = async (user_id, title, instroduction, contents, start_date, end_date, like_count, exhibition_category_id) => {
+    createExhibition = async (userId, title, instroduction, mainIamgeUrl,startDate, endDate, exhibitionCategoryId) => {
       const createExhibitionData = await Exhibition.create({
-        user_id,
+        user_id : userId,
         title,
         instroduction,
-        contents,
-        start_date,
-        end_date,
-        like_count,
-        exhibition_category_id,
+        main_image:mainIamgeUrl,
+        start_date : startDate,
+        end_date:endDate,
+        like_count : 0,
+        exhibition_category_id : exhibitionCategoryId,
       });
         return createExhibitionData;
   }

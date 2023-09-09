@@ -15,6 +15,7 @@ class PostDetail extends Sequelize.Model{
         content: {
           type: Sequelize.STRING,
         },
+        image_url: Sequelize.STRING,
         created_at: {
           type: Sequelize.DATE,
           allowNull: true,
@@ -34,7 +35,6 @@ class PostDetail extends Sequelize.Model{
   }
   static associate(db) {
     db.PostDetail.belongsTo(db.Exhibition, { foreignKey: "exhibition_id" });
-    db.PostDetail.hasMany(db.PostImage, { foreignKey: "post_detail_id" });
   }
 }
 module.exports = PostDetail;

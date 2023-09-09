@@ -9,6 +9,7 @@ class User extends Sequelize.Model{
           primaryKey: true,
           autoIncrement: true,
         },
+        ID:Sequelize.STRING,
         nickname: Sequelize.STRING,
         email: Sequelize.STRING,
         password: Sequelize.STRING,

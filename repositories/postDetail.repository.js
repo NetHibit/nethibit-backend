@@ -1,5 +1,5 @@
 const PostDetail = require("../models/postDetail");
-const Exhibition = require("../models/exhibition")
+const Exhibition = require("../models/exhibition");
 class PostDetailRepository {
     createPostDetail = async (title, content, exhibition) => {
       const createPostDetail = await PostDetail.create({

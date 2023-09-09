@@ -6,7 +6,7 @@ const session = require('express-session');
 const dotenv = require('dotenv');
 
 dotenv.config();
-// const exhibitionRouter = require('/routes/exhibition');
+const exhibitionRouter = require('./routes/exhibition.router');
 const postDetailRouter = require('./routes/postDetail.routes');
 const {sequelize} = require("./models");
 const bodyParser = require('body-parser');
@@ -35,8 +35,10 @@ app.use(cookieParser(process.env.COOKIE_SECRET));
 //         secure: false,
 //     }
 // }));
+app.use("/exhibition",exhibitionRouter);
 
-app.use('/postDetail',postDetailRouter);
+app.use('/postDetail', postDetailRouter);
+// app.use('/test',imageUploader);
 app.use((err, req, res, next) => {
   console.error(err);
   res.status(err.status || 500).json({ error: err.message });

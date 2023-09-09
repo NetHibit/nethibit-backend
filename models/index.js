@@ -11,7 +11,6 @@ const Guestbook  = require("./guestbook");
 const LikeExhibition = require("./likeExhibition");
 const Mypage  = require("./mypage");
 const PostDetail  = require("./postDetail");
-const PostImage  = require("./postImage");
 const Review  = require("./review");
 const Scrap  = require("./scrap");
 const Transaction  = require("./transaction");
@@ -76,9 +75,6 @@ Mypage.initiate(sequelize);
 db.PostDetail = PostDetail;
 PostDetail.initiate(sequelize);
 
-db.PostImage = PostImage;
-PostImage.initiate(sequelize);
-
 db.Review = Review;
 Review.initiate(sequelize);
 
@@ -103,7 +99,6 @@ Guestbook.associate(db);
 LikeExhibition.associate(db);
 Mypage.associate(db);
 PostDetail.associate(db);
-PostImage.associate(db);
 Review.associate(db);
 Scrap.associate(db);
 Transaction.associate(db);
